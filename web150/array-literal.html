@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Array Literal</title>
+
+</head>
+<body>
+    <div id="content">
+        <div class="message">Colors: <span id="colors">We were unable to find your color choice. Please try again...</span></div>
+    </div>
+    <script>
+        //declare the array and assign its values
+        var colors;
+        //literal array
+        colors = ['white', 'black', 'custom', 'turquoise', 'chartreuse', 'maroon'];
+
+        //with constructor
+        var colors = new Array('white', 'black', 'custom', 'green', 'red');
+        console.log("array length: " + colors.length);
+        
+        //update the value of the third item
+        colors[2] = 'beige';
+        var el = document.getElementById("colors");
+        el.textContent = colors[4];
+
+    </script> 
+</body>
+</html>
