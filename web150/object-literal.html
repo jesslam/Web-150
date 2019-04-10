@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>First Object</title>
+
+</head>
+
+<body>
+        <h1>TravelWorthy</h1>
+        <div id="info">
+            <h2>hotel availability</h2>
+            <div id="hotelName"></div>
+            <div id="availability"></div>
+            <p id="rooms"></p>
+            <p>rooms left</p>
+        </div>
+
+    <script>
+        //set up a literal object
+        var hotel = {
+            name: "Quay",
+            rooms: 40,
+            booked: 25,
+            checkAvailability: function(){
+                return this.rooms - this.booked; //need this is because inside the function
+            }
+
+        };
+
+        
+    </script> 
+</body>
+</html>

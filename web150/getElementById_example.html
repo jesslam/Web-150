@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Element By Id</title>
+    </head>
+    <body>
+        <div id="one"></div>
+        <div class="two"></div>
+        <p id="three"></p>
+
+        <script>
+            var divElement = document.getElementById('one');
+            console.log('divElement: ');
+            console.log(divElement);
+            divElement.textContent
+
+            var divElement2 = document.getElementsByClassName('two');
+            console.log('divElement2: ' + divElement2);
+
+            var pElement = document.getElementById('three');
+            console.log('pElement: ' + pElement);
+        </script>
+    </body>
+</html>

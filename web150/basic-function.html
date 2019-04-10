@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Basic Function</title>
+
+</head>
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="message">Welcome!
+    </div>
+
+    <script>
+        var msg = "Sign up to receive our newsletter for 10% off!";
+        //create a function to update the content
+        //of the el with id values of message
+        
+        function updateMessage(){
+            var el = document.getElementById("message");
+            el.textContent = msg;
+        }
+        
+        //call function
+        updateMessage();
+
+    </script> 
+</body>
+</html>
