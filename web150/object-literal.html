@@ -19,7 +19,7 @@
     <script>
         //set up a literal object
         var hotel = {
-            name: "Quay",
+            name: "Quay", //key value pair
             rooms: 40,
             booked: 25,
             checkAvailability: function(){
@@ -28,7 +28,13 @@
 
         };
 
-        
+        //update the html
+        var elName = document.getElementById("hotelName");
+        elName.textContent = hotel.name; //update with the property of the object
+
+        var elRooms = document.getElementById("rooms");
+        elRooms.textContent = hotel.checkAvailability(); //update with method of the object
+
     </script> 
 </body>
 </html>
