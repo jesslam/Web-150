@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Number Object</title>
+
+</head>
+<body>
+    <div id='info'></div>
+    <script>
+        var originalNumber = 10.23456;
+        var msg = '<h2>original number</h2><p>' + originalNumber + '</p>'
+        //rounding number to three decimal places
+        msg += '<h2>decimal places</h2><p>' + originalNumber.toFixed(3) + '</p>'
+        //round a number to three digits
+        msg += '<h2>three digits</h2><p>' + originalNumber.toPrecision(3) + '</p>'
+
+        var el = document.getElementById('info');
+        el.innerHTML = msg;
+
+
+    </script> 
+</body>
+</html>
