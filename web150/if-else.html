@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>IF..Else statement</title>
+
+</head>
+<body>
+    <h1>Bullseye</h1>
+    <section id="answer"></section>
+    <script>
+        //vars
+        var pass = 50; //passing score
+        var score = 45; //current score
+        var msg;
+
+        //select message based on the score
+        if(score > pass){
+            msg = "Congratulations, you passed!";
+        } else {
+            msg = "Have another go!";
+        }
+
+        var el = document.getElementById('answer');
+        el.textContent = msg;
+
+    </script> 
+</body>
+</html>

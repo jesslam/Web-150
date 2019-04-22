@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>IF..Else statement</title>
+
+</head>
+<body>
+    <h1>Bullseye</h1>
+    <section id="answer"></section>
+    <script>
+        //vars
+        var score1 = 4; //round 1 score
+        var score2 = 5; //round 2 score
+        var pass1 = 6; //round 1 passing mark
+        var pass2 = 6; //round 2 passing mark
+
+        //use logical OR (||) to check whether the user passed at least one round
+        var minPass = (score1 >= pass1) || (score2 >= pass2);
+
+        //create a message
+        var msg = 'Resit required: ' + !minPass;
+        
+        //display on the page
+        var el = document.getElementById('answer');
+        el.innerHTML = msg;
+
+    </script> 
+</body>
+</html>

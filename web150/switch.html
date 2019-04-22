@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>IF..Else statement</title>
+
+</head>
+<body>
+    <h1>Bullseye</h1>
+    <section id="answer"></section>
+    <script>
+        var msg;
+        var level = 6;
+
+        //determine the message based on the level
+        switch(level){
+            case 1:
+                msg="Good luck on the first test!";
+                break;
+            case 2:
+                msg="Keep going!";
+                break;
+            case 3:
+                msg="Well done!";
+                break;
+            default:
+                msg="Good luck!";
+                break;
+        }
+
+        //display on the page
+        var el = document.getElementById('answer');
+        el.textContent = msg
+
+    </script> 
+</body>
+</html>

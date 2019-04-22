@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>IF..Else statement</title>
+
+</head>
+<body>
+    <h1>Bullseye</h1>
+    <section id="answer"></section>
+    <script>
+        //vars
+        var score1 = 76; //round 1 score
+        var score2 = 95; //round 2 score
+        var highScore1 = 75; //round 1 passing mark
+        var highScore2 = 95; //round 2 passing mark
+
+        //check if the scores are higher than current high score
+        var comparison = (score1 + score2) > (highScore1 + highScore2);
+        if(comparison){
+            highScore1 = score1;
+            highScore2 = score2;
+        }
+
+        var totalScore = highScore1 + highScore2;
+
+        //display on the page
+        var el = document.getElementById('answer');
+        el.innerHTML = 'New high score: ' +  comparison + 
+        ' New high score is: ' + totalScore
+
+    </script> 
+</body>
+</html>
