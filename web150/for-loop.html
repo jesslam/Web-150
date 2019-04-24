@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>For loop</title>
+
+</head>
+<body>
+    <section id="answer"></section>
+    <script>
+    //create an array of scores
+    var scores = [24 ,32, 17];
+    var arrayLength = scores.length;
+    var roundNumber = 0;
+    var msg = '';
+
+    //loop through the elements in the array
+    for(var i = 0; i<arrayLength; i++){
+        roundNumber = (i + 1); //add one to the current round
+
+        //add the round to the message
+        msg += "Round " + roundNumber + ": ";
+
+        //get the score from the array
+        msg += scores[i] + '<br>';
+
+    }
+
+    document.getElementById('answer').innerHTML = msg;
+    </script> 
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>While loop</title>
+
+</head>
+<body>
+    <section id="answer"></section>
+
+
+    <script>
+    //create a times table
+    var i = 3;
+    var msg = '';
+
+    //store 5 times table in a var
+    do {
+        msg += i + ' x 5 = ' + (i * 5) + '<br>';
+        i++;
+    } while (i < 7);
+
+    document.getElementById('answer').innerHTML = msg;
+    </script> 
+</body>
+</html>

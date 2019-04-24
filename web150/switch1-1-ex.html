@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Using switch statement</title>
+
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    var text;
+    switch (6) {
+        case 6: //if no break, uses next case to evalulate
+        case 0: 
+            text = "It's the weekend!";
+            break;
+        default: //in this case, default is anything that is not 6 or 0
+            text = "Looking forward to the weekend";
+
+        }
+    document.getElementById("demo").innerHTML = text;
+    </script> 
+</body>
+</html>

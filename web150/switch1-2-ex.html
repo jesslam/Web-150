@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Using switch statement</title>
+
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    var text;
+    var animal = 'horse';
+    switch (animal) {
+        case 'cat':
+            text = 'meow'
+            break;
+        case 'dog':
+            text = 'woof'
+            break;
+        case 'horse': 
+            text = 'neigh'
+            break;
+        default:
+            text = "I don't know this animal";
+
+        }
+    document.getElementById("demo").innerHTML = text;
+    </script> 
+</body>
+</html>
