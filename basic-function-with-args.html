@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Basic Function with Arguments</title>
+
+</head>
+<body>
+    <h1>Area of Rectangle</h1>
+    <div id="area">Area</div>
+    <div id="cubeArea">Cube Area</div>
+
+    <script>
+        //define the function
+        function getArea(width, height){
+            return width * height;
+        }
+
+        function getCubeArea(width, height, length){
+            return width * height * length;
+        }
+
+        //call the function
+        var area = getArea(4, 7);
+        var cubeArea = getCubeArea(2, 3, 10);
+
+        //display area
+        var el = document.getElementById("area");
+        el.textContent = "Rectangle Area is " + area;
+
+        var el1 = document.getElementById("cubeArea");
+        el1.textContent = "Cube Area is " + cubeArea;
+
+    </script> 
+</body>
+</html>

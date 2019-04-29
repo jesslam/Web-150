@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 5: Document Object Model - Get Element By ID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="code/javascript-and-jquery-book-code-0915/c05/css/c05.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List King</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+    </div>
+    <script>
+        //select the element
+        var el = document.getElementById('one');
+
+        //change the value of the class attribute
+        el.className = 'cool';
+
+        //change to cool for li with id of four
+        var el1 = document.getElementById('four');
+
+        //change the value of the class attribute
+        el1.className = 'cool';
+
+    </script>
+  </body>
+</html>

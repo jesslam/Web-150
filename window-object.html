@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Add Content</title>
+
+</head>
+<body>
+    <div id="info"></div>
+    <script>
+        //create a var msg to hold the info associated with the window
+        var msg = '<h2> browser window </h2><p>width: ' +
+            window.innerWidth + '</p>';
+
+            msg += '<p>height: ' + window.innerHeight + '</p>';
+
+            msg += '<h2> screen </h2><p>width: ' +
+            window.screen.width + '</p>';
+
+            msg += '<p>height: ' + window.screen.height + '</p>';
+
+            msg += '<h2> history </h2><p>items: ' + 
+            window.history.length + '</p>';
+
+            //update html
+            var el = document.getElementById('info');
+            el.innerHTML = msg;
+
+            alert("current page: " + window.location);
+
+    </script> 
+</body>
+</html>

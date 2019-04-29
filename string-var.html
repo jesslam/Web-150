@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String</title>
+</head>
+<body>
+    <div id="content">
+        <div id="title">Howdy <span id="name">friend</span> !</div>
+        <div id="message">Take a look around...</div>
+    </div>
+    <script>
+        //create vars
+        var username;
+        var message;
+
+        //initialize
+        username = "Molly";
+        message = "See our upcoming range";
+
+        //get elements by id
+        //name
+        var elName = document.getElementById("name");
+        elName.textContent = username;
+        //message
+        var elMsg = document.getElementById("message");
+        elMsg.textContent = message;
+    
+    </script>
+    
+</body>
+</html>
