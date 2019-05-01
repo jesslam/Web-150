@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 5: Document Object Model - Add Element</title>
+    <link rel="stylesheet" href="code/javascript-and-jquery-book-code-0915/c05/css/c05.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul id="todo"><li id="one" class="hot"><em>fresh</em> figs</li><li id="two" class="hot">pine nuts</li><li id="three" class="hot">honey</li><li id="four">balsamic vinegar</li></ul>
+    </div>
+    <script>
+        //create a new element
+        var newEl = document.createElement('li');
+
+        //create a text node
+        var newText = document.createTextNode('quinoa');
+    
+        //attach the text node to the li
+        newEl.appendChild(newText);
+
+        //find the position of where to insert the new element
+        var position = document.getElementsByTagName('ul')[0];
+
+        //insert the new element in its position
+        position.appendChild(newEl);
+    </script>
+  </body>
+</html>
