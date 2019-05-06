@@ -1,18 +1,22 @@
-//create variables to store user input
+//create msg and variable to store user input
 var msg = 'Enter test score' + '\nOr enter 999 to end entries'
-var score = window.prompt(msg);
 var score_list = [];
-var lastScore = 999;
-var arrayLength = score_list.length;
-var i;
+var sum = 0;
 
 //store prompt in a loop
 do {
-    var nextScore = score;
+    var score = parseInt(window.prompt(msg));
     console.log(score);
-    score_list.push(nextScore);
+    if(score != 999){
+        sum += score;
+        score_list.push(score);
+    } 
+
 } while (score < 999);
 
-//find the average
+//find the number of scores entered
+console.log(score_list)
+var arrayLength = score_list.length;
 
-alert('Average score is ' + (score/arrayLength));
+//find the average
+alert('Average score is ' + (sum/arrayLength));
