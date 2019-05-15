@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 6: Events - Click</title>
+    <link rel="stylesheet" href="code/javascript-and-jquery-book-code-0915/c06/css/c06.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1>List King</h1>
+      <h2>New Account</h2>
+      <form method="post" action="http://www.example.org/register">
+
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" /><div id="feedback"></div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+
+        <input type="submit" value="sign up" />
+
+      </form>
+    </div>
+    <script>
+        //create a message
+        var msg = '<div class=\"header\"><a id=\"close\" href="#">close X</a></div>';
+        msg += '<div><h2>System maintenance</h2>';
+        msg += 'Our servers are being updated between 3-4 am. ';
+        msg += 'During this time there may be service disruptions.</div>';
+
+        var elNote = document.createElement('div'); //create a new el
+        elNote.setAttribute('id', 'note');
+        elNote.innerHTML = msg;
+        document.body.appendChild(elNote);
+
+        //remove the note
+        function dismissNote(){
+            document.body.removeChild(elNote);
+        }
+
+        var elClose = document.getElementById('close'); //get the close button
+        elClose.addEventListener('click', dismissNote, false);
+
+    </script>
+  </body>
+</html>
