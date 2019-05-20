@@ -1,0 +1,104 @@
+<!-- codeshare.io/2pw4w0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Simple Calculator | WEB150</title>
+
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+
+        div.valueInput, div.result {
+            display: inline-block;
+            width: 150px;
+        }
+
+        input.valueInput, input#result {
+            width: 100%;
+            font-size:1.2rem;
+            padding:0.5rem;
+        }
+
+        div.operator {
+            display: inline-block;
+            width: 50px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        button#calculate {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+
+    <div class="valueInput">Enter first value:
+        <input type="text" name="value1" id="value1" class="valueInput" />
+    </div>
+
+    <div class="operator">+</div>
+
+    <div class="valueInput">Enter second value:
+        <input type="text" name="value2" id="value2" class="valueInput" />
+    </div>
+
+    <div class="operator">=</div>
+
+    <div class="result">Result:
+        <input type="text" name="result" id="result" disabled />
+    </div>
+
+    <button type="button" id="calculate">Calculate</button>
+
+    <script>
+        window.onload = function(){
+            //get the calculate button
+            var calcButton = document.getElementById('calculate');
+
+            //bind click event listener to the button
+            calcButton.addEventListener('click', calcSum, false);
+
+            //create function to calculation sum
+            function calcSum() {
+                //get user input for the first value
+                var value1element = document.getElementById('value1');
+                var value1 = parseInt(value1element.value);
+
+                //get user input for the second value
+                var value2 = parseInt(document.getElementById('value2').value);
+
+                //to debug concatenation (ended up adding parseInt to user values)
+                console.log(value1);
+                console.log(typeof value1);
+
+                //test user input
+                if (isNaN(value1)){
+                    alert('Please enter a number for the first value.');
+                } else if(isNaN(value2)){
+                    alert('Please enter a number for the second value.');
+                } else {
+
+                    //calculate sum
+                    var sum = value1 + value2;
+
+                    //get result field
+                    var resultElement = document.getElementById('result');
+
+                    //display results of the calculation
+                    resultElement.value = sum;
+                }
+            }
+    }
+    </script>
+</body>
+</html>

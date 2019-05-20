@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Including jQuery</title>
+    <link rel="stylesheet" href="code/javascript-and-jquery-book-code-0915/c07/css/c07.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List King</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+    </div>
+    <script>
+        //first jQuery
+        //make sure the HTML elements have loaded
+        $(document).ready(function(){
+            $('h2').hide().slideDown();
+            $('li').hide().each(function(index){
+                $(this).delay(700*index).fadeIn(700);
+            });
+
+        });
+    </script>
+
+  </body>
+</html>
