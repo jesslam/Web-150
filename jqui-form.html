@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - jQuery UI Form Controls</title>
+    <link rel="stylesheet" href="code/javascript-and-jquery-book-code-0915/c09/css/c09.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/vader/jquery-ui.css" />
+  </head>
+  <body>
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>Find Accommodation</h2>
+    <div class="third"><img src="img/toys1.jpg" alt="Circuit boards" /></div>
+    <div class="two-thirds">
+      <form>
+        <p id="price">
+          <label for="amount">Price range:</label>
+          <input type="text" id="amount" />
+        </p>
+        <div id="price-range"></div>
+        <p>
+          <label for="arrival">Arrival date:</label>
+          <input type="text" id="arrival" />
+        </p>
+        <input type="submit" value="Find a hotel" />
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $('#arrival').datepicker(); //turn the input field into a jqui datepicker widget
+            
+            var $amount = $('#amount');
+            var $range = $('#price-range');
+
+            $('#price-range').slider({  //turn the price range div into a slider widget
+                range: true, //true that the range has two handles
+                min: 0, //min value
+                max: 400, //max value
+                values: [75, 300], //use these values when the page loads
+                slide: function(event, ui){ //when the slider updates amount element
+                $amount.val('$' + ui.values[0] + ' - $' + ui.values[1]);
+
+                }
+
+            });
+
+            //set the initial values of the amount element
+            $amount.val('$' + $range.slider('values', 0) //lower range
+            + ' - $' + $range.slider('values', 1)); //upper range
+        });
+    </script>
+  </body>
+</html>
